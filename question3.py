@@ -7,15 +7,15 @@ down_payment = 4
 
 client_list = [
     # NAME              AGE      TYPE of CASE    CASE HOURS  DOWN PAYMENT
-    ['Bob Smith',       18,     'car accident',     60,         'yes'], # yes
-    ['Valeria Jeqa,',   17,     'work accident',    55,         'yes'], # no
-    ['Victor Fresh',    23,     'school accident',  20,          'no'], # no
-    ['Johnny Ley',      44,     'car accident',     33,         'yes'], # yes
-    ['Daniel Itca',     20,     'work accident',    20,          'no'], # no
-    ['Gillis Bukard',   79,     'car accident',     21,         'yes'], # no
-    ['Joe Italy',       17,     'work accident',    25,         'yes'], # no
-    ['Lucas Bark',      19,     'school accident',  90,          'no'], # no
-    ['Kai Stullich',    18,     'car accident',     35,         'yes']  # yes
+    ['Bob Smith',       18,     'car accident',     60,         'yes'], # X
+    ['Valeria Jeqa,',   17,     'work accident',    55,         'yes'], # 
+    ['Victor Fresh',    23,     'school accident',  20,          'no'], # 
+    ['Johnny Ley',      44,     'car accident',     33,         'yes'], # X
+    ['Daniel Itca',     20,     'work accident',    20,          'no'], # 
+    ['Gillis Bukard',   79,     'car accident',     21,         'yes'], # 
+    ['Joe Italy',       17,     'work accident',    25,         'yes'], # 
+    ['Lucas Bark',      19,     'school accident',  90,          'no'], # 
+    ['Kai Stullich',    18,     'car accident',     35,         'yes']  # X
 ]
 
 # ---- REQUIREMENTS ----
