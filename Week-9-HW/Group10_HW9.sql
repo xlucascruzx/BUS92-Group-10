@@ -14,9 +14,7 @@ CREATE TABLE MovieGenre (
 );
 CREATE TABLE Movies (
 	ID INT,
-	MovieActor_ID INT,
-	MovieActorAge_ID INT,
-	MovieGenre_ID INT 
+	Title TEXT, 
 	PRIMARY KEY (ID)
 );
 
@@ -62,6 +60,16 @@ INSERT INTO MovieGenre (ID, Genre_Type) VALUES (13, 'War');
 
 -- 4) Place here the script that populates your table with 10 rows
 
+INSERT INTO Movies (ID, Title) VALUES (1, 'Suicide Squad');
+INSERT INTO Movies (ID, Title) VALUES (2, 'Finding Dory');
+INSERT INTO Movies (ID, Title) VALUES (3, 'The Jungle Book');
+INSERT INTO Movies (ID, Title) VALUES (4, 'The Girl in The Train');
+INSERT INTO Movies (ID, Title) VALUES (5, 'Dope');
+INSERT INTO Movies (ID, Title) VALUES (6, 'Straight Outta Compton');
+INSERT INTO Movies (ID, Title) VALUES (7, 'Jurassic World');
+INSERT INTO Movies (ID, Title) VALUES (8, 'Ted');
+INSERT INTO Movies (ID, Title) VALUES (9, 'Maleficint');
+INSERT INTO Movies (ID, Title) VALUES (10, 'Gone Grl');
 
 
 
@@ -90,17 +98,15 @@ SELECT Actor_Name FROM MovieActors WHERE Actor_Name LIKE '%ford%';
 
 --	12) Create 2 SELECT statements querying certain fields using a complex WERE clause, using combinations of AND and/or OR
 
-SELECT FROM MovieGenre WHERE genre_type = ‘Action’  AND Actor_Age > 73;
-SELECT FROM MovieActors WHERE Actor_Name = ‘Al Pacino’ OR Actor_age > 40;
-
+SELECT * FROM MovieGenre,MovieActors WHERE Genre_Type = 'Action'  AND Actor_Age > 73;
+SELECT * FROM MovieActors WHERE Actor_Name = 'Al Pacino' OR Actor_age > 40;
 
 
 
 --	13) Create 2 SELECT queries using the WHERE and the ORDER BY clauses
 
-
-
-
+SELECT * FROM MovieActors ORDER BY Actor_Name;
+SELECT * FROM MovieActor ORDER BY Actor_Age;
 
 
 --	14) Create 2 SELECT queries using the WHERE and the double ORDER BY clauses
