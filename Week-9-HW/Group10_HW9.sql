@@ -1,58 +1,67 @@
 -- Question One: Favorite Activity
 --------------------------------------------------------------------------
 -- 1) Place here the script that creates your 3 tables
-CREATE TABLE FoodType (
-	ID INT NOT NULL,    
-	TypeOfFood TEXT NOT NULL,
-	GlutenFree TEXT, -- (Y / N)
-	Vegan TEXT, -- (Y / N)
+CREATE TABLE MovieActors (
+	ID INT,    
+	Actor_Name TEXT,
+	Actor_Age INT,
 	PRIMARY KEY (ID)
 );
-CREATE TABLE FoodCost (
-	ID INT NOT NULL,
-	FoodName TEXT NOT NULL,
-	FoodCost REAL, -- All should be decimals (i.e. 7.00, 7.50, 7.99 etc.)
+CREATE TABLE MovieGenre (
+	ID INT,
+	Genre_Type TEXT,
 	PRIMARY KEY (ID)
 );
-CREATE TABLE Food (
-	ID INT NOT NULL,
-	FoodType_ID INT NOT NULL,
-	FoodCost_ID INT NOT NULL,
+CREATE TABLE Movies (
+	ID INT,
+	MovieActor_ID INT,
+	MovieActorAge_ID INT,
+	MovieGenre_ID INT 
 	PRIMARY KEY (ID)
 );
 
 -- 2) Place here the script that populates your first sub-table with 5 rows
 
-INSERT INTO FoodType (ID, TypeOfFood, GlutenFree, Vegan) VALUES (1, 'Chinese', 'N', 'N');
-INSERT INTO FoodType (ID, TypeOfFood, GlutenFree, Vegan) VALUES (2, 'Indian', 'Y', 'Y');
-INSERT INTO FoodType (ID, TypeOfFood, GlutenFree, Vegan) VALUES (3, 'Italian', 'Y', 'Y');
-INSERT INTO FoodType (ID, TypeOfFood, GlutenFree, Vegan) VALUES (4, 'American', 'Y', 'N');
-INSERT INTO FoodType (ID, TypeOfFood, GlutenFree, Vegan) VALUES (5, 'Cajun', 'N', 'N');
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (1, 'Brad Pitt', 33);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (2, 'Jennifer Lawrence', 24);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (3, 'Tom Cruise', 45);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (4,'Tom Hanks', 56);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (5, 'Harrison Ford', 74);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (6, 'Adam Sandler', 50);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (7, 'Jack Nicholson',79);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (8, 'Clint Eastwood', 86);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (9, 'Robert De Niro', 73);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (10, 'Will Smith', 48);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (11, 'Al Pacino', 76);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (12, 'Morgan Freeman', 79);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (13, 'Michael Caine', 83);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (14, 'Lawrence Olivier', 88);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (15, 'Christian Ford', 42);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (16, 'Mark Wahlberg', 45);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (17, 'Martin Scorsese', 73);
+INSERT INTO MovieActors (ID, Actor_Name, Actor_Age) VALUES (18, 'William Shakespeare', 452);
 
 
 
 -- 3) Place here the script that populates your second sub-table with 5 rows
 
-INSERT INTO FoodCost (ID, FoodName, FoodCost) VALUES (1, 'Orange Chicken', 8.99);
-INSERT INTO FoodCost (ID, FoodName, FoodCost) VALUES (2, 'Yellow Curry', 6.50);
-INSERT INTO FoodCost (ID, FoodName, FoodCost) VALUES (3, 'Alfredo Pasta', 11.00);
-INSERT INTO FoodCost (ID, FoodName, FoodCost) VALUES (4, 'Lobster', 12.99);
-INSERT INTO FoodCost (ID, FoodName, FoodCost) VALUES (5, 'Blue Burbon Burger', 10.99);
-
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (1, 'Action');
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (2, 'Animation');
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (3, 'Comedy');
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (4, 'Documentary');
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (5, 'Drama');
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (6, 'Crime');
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (7, 'Sci-Fi');
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (8, 'Mystery');
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (9, 'Horror');
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (10, 'Romance');
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (11, 'Family');
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (12, 'Thriller');
+INSERT INTO MovieGenre (ID, Genre_Type) VALUES (13, 'War');
 
 
 -- 4) Place here the script that populates your table with 10 rows
 
-INSERT INTO Food (ID, FoodType_ID, FoodCost_ID) VALUES (1, );
-INSERT INTO Food (ID, FoodType_ID, FoodCost_ID) VALUES (2, );
-INSERT INTO Food (ID, FoodType_ID, FoodCost_ID) VALUES (3, );
-INSERT INTO Food (ID, FoodType_ID, FoodCost_ID) VALUES (4, );
-INSERT INTO Food (ID, FoodType_ID, FoodCost_ID) VALUES (5, );
-INSERT INTO Food (ID, FoodType_ID, FoodCost_ID) VALUES (1, );
-INSERT INTO Food (ID, FoodType_ID, FoodCost_ID) VALUES (2, );
-INSERT INTO Food (ID, FoodType_ID, FoodCost_ID) VALUES (3, );
-INSERT INTO Food (ID, FoodType_ID, FoodCost_ID) VALUES (4, );
-INSERT INTO Food (ID, FoodType_ID, FoodCost_ID) VALUES (5, );
 
 
 
@@ -62,26 +71,27 @@ INSERT INTO Food (ID, FoodType_ID, FoodCost_ID) VALUES (5, );
 
 --	9) Create 2 SELECT statements querying all fields
 
-
-
-
-
+SELECT * FROM MovieActors;
+SELECT * FROM MovieGenre;
 
 
 --	10) Create 2 SELECT statements querying certain fields
 
-
-
+SELECT Actor_Name FROM MovieActors;
+SELECT Genre_Type FROM MovieGenre;
 
 
 
 --	11) Create 2 SELECT statements querying certain fields using a simple WHERE clause
 
-
+SELECT Actor_Name FROM MovieActors WHERE Actor_Age > 25;
+SELECT Actor_Name FROM MovieActors WHERE Actor_Name LIKE '%ford%';
 
 
 --	12) Create 2 SELECT statements querying certain fields using a complex WERE clause, using combinations of AND and/or OR
 
+SELECT FROM MovieGenre WHERE genre_type = ‘Action’  AND Actor_Age > 73;
+SELECT FROM MovieActors WHERE Actor_Name = ‘Al Pacino’ OR Actor_age > 40;
 
 
 
