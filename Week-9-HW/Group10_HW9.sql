@@ -105,14 +105,15 @@ SELECT * FROM MovieActors WHERE Actor_Name = 'Al Pacino' OR Actor_age > 40;
 
 --	13) Create 2 SELECT queries using the WHERE and the ORDER BY clauses
 
-SELECT * FROM MovieActors ORDER BY Actor_Name;
-SELECT * FROM MovieActor ORDER BY Actor_Age;
+
+SELECT * FROM MovieActors WHERE Actor_Age < 55 ORDER BY Actor_Name;
+SELECT * FROM MovieActors WHERE Actor_Age > 30 ORDER BY Actor_Age DESC;
 
 
 --	14) Create 2 SELECT queries using the WHERE and the double ORDER BY clauses
 
-
-
+SELECT * FROM MovieActors WHERE Actor_Age > 25 ORDER BY Actor_Age DESC;
+SELECT * FROM MovieGenre  WHERE Genre_Type = ‘Comedy’ ORDER BY ID DESC;
 
 
 
