@@ -1,4 +1,4 @@
-department_id,department_name,department_description,department_number,department_direct_line
+department_id,department_name,department_description,department_phone_number,department_direct_line
 1,Bathroom,Anything for bathrooms,4086661111,304
 2,Plumming,Items for plumming,4086661112,305
 3,Electrical,Items for any electrical work,4086661113,306
